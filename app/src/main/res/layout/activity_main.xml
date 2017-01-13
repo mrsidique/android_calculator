@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#606060"
+    tools:context="com.tappforce.calculator.MainActivity">
+
+    <TextView
+        android:text="0"
+        android:layout_width="match_parent"
+        android:layout_height="50pt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/resultTextView"
+        android:textAlignment="textEnd"
+        android:background="#A0A0A0"
+        android:textColor="#FFF"
+        android:textSize="80sp" />
+
+    <Button
+        android:text="AC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/ac_button"
+        android:onClick="clearButtonTapped"
+        android:layout_above="@+id/eightButton"
+        android:layout_toLeftOf="@+id/plusMinusButton"
+        android:layout_toStartOf="@+id/plusMinusButton" />
+
+    <Button
+        android:text="7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ac_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/sevenButton"
+        android:onClick="numberButtonTapped"/>
+
+    <Button
+        android:text="8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/plusMinusButton"
+        android:layout_toRightOf="@+id/sevenButton"
+        android:layout_toEndOf="@+id/sevenButton"
+        android:id="@+id/eightButton"
+        android:onClick="numberButtonTapped"/>
+
+    <Button
+        android:text="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sevenButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/fourButton"
+        android:onClick="numberButtonTapped"/>
+
+    <Button
+        android:text="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eightButton"
+        android:layout_toRightOf="@+id/fourButton"
+        android:layout_toEndOf="@+id/fourButton"
+        android:id="@+id/fiveButton"
+        android:onClick="numberButtonTapped"/>
+
+    <Button
+        android:text="6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sixButton"
+        android:layout_alignBaseline="@+id/fiveButton"
+        android:layout_alignBottom="@+id/fiveButton"
+        android:layout_toRightOf="@+id/fiveButton"
+        android:layout_toEndOf="@+id/fiveButton"
+        android:onClick="numberButtonTapped"/>
+
+    <Button
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fourButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/oneButton"
+        android:onClick="numberButtonTapped"/>
+
+    <Button
+        android:text="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fiveButton"
+        android:layout_toRightOf="@+id/oneButton"
+        android:layout_toEndOf="@+id/oneButton"
+        android:id="@+id/twoButton"
+        android:onClick="numberButtonTapped"/>
+
+    <Button
+        android:text="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/threeButton"
+        android:layout_alignBaseline="@+id/twoButton"
+        android:layout_alignBottom="@+id/twoButton"
+        android:layout_toRightOf="@+id/fiveButton"
+        android:layout_toEndOf="@+id/fiveButton"
+        android:onClick="numberButtonTapped"/>
+
+    <Button
+        android:text="+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/plusButton"
+        android:layout_alignBaseline="@+id/threeButton"
+        android:layout_alignBottom="@+id/threeButton"
+        android:layout_toRightOf="@id/threeButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="operandButtonTapped"/>
+
+    <Button
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zeroButton"
+        android:layout_below="@+id/oneButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/threeButton"
+        android:layout_toStartOf="@+id/threeButton"
+        android:onClick="numberButtonTapped"/>
+    <Button
+        android:text="."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/decimalButton"
+        android:layout_alignBaseline="@+id/zeroButton"
+        android:layout_alignBottom="@+id/zeroButton"
+        android:layout_toRightOf="@+id/zeroButton"
+        android:layout_toEndOf="@+id/zeroButton"
+        android:onClick="numberButtonTapped"/>
+
+    <Button
+        android:text="="
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/equalButton"
+        android:layout_below="@+id/threeButton"
+        android:layout_toRightOf="@id/decimalButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="operandButtonTapped" />
+
+    <Button
+        android:text="+/-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/plusMinusButton"
+        android:onClick="invertValueButtonTapped"
+        android:layout_below="@+id/resultTextView"
+        android:layout_toRightOf="@+id/eightButton"
+        android:layout_toEndOf="@+id/eightButton" />
+
+    <Button
+        android:text="-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addButton"
+        android:onClick="operandButtonTapped"
+        android:layout_alignBaseline="@+id/sixButton"
+        android:layout_alignBottom="@+id/sixButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/sixButton"/>
+
+    <Button
+        android:text="9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nineButton"
+        android:onClick="numberButtonTapped"
+        android:layout_below="@+id/plusMinusButton"
+        android:layout_toRightOf="@+id/eightButton"
+        android:layout_toEndOf="@+id/eightButton" />
+
+    <Button
+        android:text="X"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiplyButton"
+        android:onClick="operandButtonTapped"
+        android:layout_alignBaseline="@+id/nineButton"
+        android:layout_alignBottom="@+id/nineButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/nineButton"/>
+
+    <Button
+        android:text="÷"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/divideButton"
+        android:onClick="operandButtonTapped"
+        android:layout_below="@+id/resultTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/plusMinusButton" />
+
+</RelativeLayout>
